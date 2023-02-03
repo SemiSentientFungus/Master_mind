@@ -1,6 +1,12 @@
-class Human_Solver 
+# frozen_string_literal: true
 
-    def initialize
-        puts Human_Solver
-    end
+# human player class, this will take input from a human player to solve issues
+class HumanSolver
+  def initialize
+    puts HumanSolver
+  end
+
+  def round
+    puts 'this is a human!'
+  end
 end
