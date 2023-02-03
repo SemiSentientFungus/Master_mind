@@ -14,8 +14,13 @@ class Mastermind
     @game_master = game_master
   end
 
+  def playround
+    p make_code
+    p printinfo
+  end
+
   def make_code
-    @game_master.code
+    @code = @game_master.code
   end
 
   def printinfo
@@ -27,3 +32,9 @@ Player = HumanSolver.new
 Computer = ComputerSolver.new
 Computer_Master = ComputerGameMaster.new
 Human_Master = HumanGameMaster.new
+
+Game_One = Mastermind.new(Player, Computer_Master)
+Game_Two = Mastermind.new(Computer, Human_Master)
+
+Game_One.playround
+Game_Two.playround
