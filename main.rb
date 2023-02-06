@@ -12,11 +12,11 @@ class Mastermind
   def initialize(player, game_master)
     @player = player
     @game_master = game_master
+    @code = []
   end
 
   def playround
-    p make_code
-    p printinfo
+    @code = make_code
   end
 
   def make_code
